@@ -35,15 +35,20 @@ export default function NavBar() {
                         ></button>
                     </div>
                     <div className="offcanvas-body">
-                        <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul className="navbar-nav justify-content-end flex-grow-1 pe-2">
                             <li className="nav-item">
-                                <Link className={`text-decoration-none nav-link ${location.pathname === '/home' ? 'active' : ''}`} aria-current="page" to="/home" onClick={toggleMenu}>
+                                <Link className={`text-decoration-none nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to="/" onClick={toggleMenu}>
                                     Home
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className={`text-decoration-none nav-link ${location.pathname === '/todos' ? 'active' : ''}`} to="/todos" onClick={toggleMenu}>
-                                    Todos
+                                    My Current Tasks
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`text-decoration-none nav-link ${location.pathname === '/todos/add' ? 'active' : ''}`} to="/todos/add" onClick={toggleMenu}>
+                                    Add a New Task
                                 </Link>
                             </li>
                         </ul>
