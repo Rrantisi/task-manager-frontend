@@ -1,0 +1,11 @@
+.table {
+    border-collapse: separate;
+    border-spacing: 20px;
+    table-layout: fixed;
+    width: 100%; /* Set the table width to 100% */
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+}
