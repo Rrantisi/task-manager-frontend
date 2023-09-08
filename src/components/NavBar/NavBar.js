@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import './NavBar.css';
+import Footer from '../../components/Footer/Footer';
 
-export default function NavBar() {
+export default function NavBar({isMenuOpen, setIsMenuOpen}) {
     const location = useLocation();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
     return (
-        <nav className="navbar navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-dark bg-dark fixed-top border-bottom border-danger border-4">
             <div className="container-fluid">
-                <Link className="navbar-brand text-decoration-none" to="#">
+                <Link className="navbar-brand text-decoration-none text-light" to="#">
                     Task Manager
                 </Link>
                 <button
@@ -22,11 +23,9 @@ export default function NavBar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div
-                    className={`text-bg-dark offcanvas offcanvas-end ${isMenuOpen ? 'show' : ''}`}
-                >
-                    <div className="offcanvas-header">
-                        <h5 className="offcanvas-title">Manage Tasks</h5>
+                <div className={`text-bg-dark offcanvas offcanvas-end ${isMenuOpen ? 'show' : ''}`}>
+                    <div className="offcanvas-header text-warning">
+                        <h5 className="offcanvas-title m-3">Menu</h5>
                         <button
                             type="button"
                             className="btn-close btn-close-white"
@@ -37,7 +36,10 @@ export default function NavBar() {
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-2">
                             <li className="nav-item">
-                                <Link className={`text-decoration-none nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to="/" onClick={toggleMenu}>
+                                <Link className={`text-decoration-none nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to={{
+                                        pathname: '/',
+                                        state: { isMenuOpen: isMenuOpen } // Pass your custom props here
+                                    }} onClick={toggleMenu}>
                                     Home
                                 </Link>
                             </li>
@@ -52,6 +54,7 @@ export default function NavBar() {
                                 </Link>
                             </li>
                         </ul>
+                        <Footer />
                     </div>
                 </div>
             </div>
