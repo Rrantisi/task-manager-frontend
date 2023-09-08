@@ -1,0 +1,8 @@
+.stacked-start {
+    box-shadow:
+        inset 2px 0px 0px #d8c697, /* Second bottom border (green) */
+        inset 4px 0px 0px #ebc66a, /* Second bottom border (green) */
+        inset 6px 0px 0px darkgoldenrod; /* First bottom border (red) */
+}
+
+
