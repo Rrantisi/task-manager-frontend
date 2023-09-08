@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import * as todoAPI from '../../utilities/todos-api';
-// import './CreateTodoPage.css';
+import './CreateTodoPage.css';
 
 export default function CreateTodoPage() {
     const [message, setMessage] = useState('');
@@ -55,27 +55,31 @@ export default function CreateTodoPage() {
     }
 
     return (
-        <div style={{ marginTop: 80 }}>
-        <h3>Create New Todo</h3>
+        <div className='form-wrapper' style={{ marginTop: 80 }}>
+        <h3>Add a New Task</h3>
         {message && <p>{message}</p>}
         <form onSubmit={onSubmit}>
             <div className="form-group">
-            <label>Description: </label>
-            <input
-                type="text"
-                className="form-control"
-                value={todo.todo_description}
-                onChange={onChangeTodoDescription}
-            />
+                <label>Description: </label>
+                <div className='col-lg-4 col-md-2 col-sm-2'>
+                    <input
+                        type="text"
+                        className="form-control border-dark bg-warning-subtle"
+                        value={todo.todo_description}
+                        onChange={onChangeTodoDescription}
+                    />
+                </div>
             </div>
             <div className="form-group">
-            <label>Responsible: </label>
-            <input
-                type="text"
-                className="form-control"
-                value={todo.todo_responsible}
-                onChange={onChangeTodoResponsible}
-            />
+                <label>Responsible: </label>
+                <div className='col-lg-4 col-md-2 col-sm-2'>
+                    <input
+                    type="text"
+                    className="form-control border-dark bg-warning-subtle"
+                    value={todo.todo_responsible}
+                    onChange={onChangeTodoResponsible}
+                    />
+                </div>
             </div>
             <div className="form-group">
             <div className="form-check form-check-inline">
@@ -117,7 +121,7 @@ export default function CreateTodoPage() {
             </div>
 
             <div className="form-group">
-            <input type="submit" value="Create Todo" className="btn" />
+            <input type="submit" value="Create Todo" className="btn btn-warning" />
             </div>
         </form>
         </div>
