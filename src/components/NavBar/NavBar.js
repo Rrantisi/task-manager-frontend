@@ -25,7 +25,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen}) {
                 </button>
                 <div className={`text-bg-dark offcanvas offcanvas-end ${isMenuOpen ? 'show' : ''}`}>
                     <div className="offcanvas-header text-warning">
-                        <h5 className="offcanvas-title m-3">Menu</h5>
+                        <h5 className="offcanvas-title m-2 ps-4">Menu</h5>
                         <button
                             type="button"
                             className="btn-close btn-close-white"
@@ -35,7 +35,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen}) {
                     </div>
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-2">
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link className={`text-decoration-none nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to={{
                                         pathname: '/',
                                         state: { isMenuOpen: isMenuOpen } // Pass your custom props here
@@ -43,12 +43,12 @@ export default function NavBar({isMenuOpen, setIsMenuOpen}) {
                                     Home
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link className={`text-decoration-none nav-link ${location.pathname === '/todos' ? 'active' : ''}`} to="/todos" onClick={toggleMenu}>
                                     My Current Tasks
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item p-1">
                                 <Link className={`text-decoration-none nav-link ${location.pathname === '/todos/add' ? 'active' : ''}`} to="/todos/add" onClick={toggleMenu}>
                                     Add a New Task
                                 </Link>
