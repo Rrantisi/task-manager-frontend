@@ -23,9 +23,9 @@ export default function TodosPage({isMenuOpen}) {
 //   console.log('isMenuOpen prop in TodosPage:', isMenuOpen);
 
   return (
-    <div className="container-fluid" style={{ marginTop: 80 }}> 
+    <div className="col-md-12 col-lg-12 col-sm-12" style={{ marginTop: 80 }}> 
         <div className="row"> 
-            <div className='col-md-12 col-lg-12 col-sm-12'> 
+            <div> 
                 <div className="todospage-div"> 
                     <h3 className="heading">Task Dashboard</h3>
                     <table className="table table-bordered table-striped table-warning text-muted"> 
