@@ -55,16 +55,16 @@ export default function CreateTodoPage() {
     }
 
     return (
-        <div className='form-wrapper' style={{ marginTop: 80 }}>
-        <h3>Add a New Task</h3>
+        <div className='form-wrapper col-lg-4 col-md-2 col-sm-2' style={{ marginTop: 80 }}>
+        <h3 className="pb-3">Add a New Task</h3>
         {message && <p>{message}</p>}
         <form onSubmit={onSubmit}>
             <div className="form-group">
                 <label>Description: </label>
-                <div className='col-lg-4 col-md-2 col-sm-2'>
+                <div>
                     <input
                         type="text"
-                        className="form-control border-dark bg-warning-subtle"
+                        className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3"
                         value={todo.todo_description}
                         onChange={onChangeTodoDescription}
                     />
@@ -72,10 +72,10 @@ export default function CreateTodoPage() {
             </div>
             <div className="form-group">
                 <label>Responsible: </label>
-                <div className='col-lg-4 col-md-2 col-sm-2'>
+                <div>
                     <input
                     type="text"
-                    className="form-control border-dark bg-warning-subtle"
+                    className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3"
                     value={todo.todo_responsible}
                     onChange={onChangeTodoResponsible}
                     />
@@ -121,7 +121,7 @@ export default function CreateTodoPage() {
             </div>
 
             <div className="form-group">
-            <input type="submit" value="Create Todo" className="btn btn-warning" />
+            <input type="submit" value="Add Task" className="btn btn-warning mt-4 ps-4 pe-4" />
             </div>
         </form>
         </div>
