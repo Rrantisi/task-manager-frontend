@@ -7,20 +7,29 @@ import CreateTodoPage from '../../pages/CreateTodoPage/CreateTodoPage';
 import EditTodoPage from '../../pages/EditTodoPage/EditTodoPage';
 import DeleteTodoPage from '../../pages/DeleteTodoPage/DeleteTodoPage';
 import HomePage from '../../pages/HomePage/HomePage';
+import AuthPage from '../../pages/AuthPage/AuthPage';
+import { getUser } from '../../utilities/users-service';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState(getUser());
 
   return (
     <main className="App bg-dark p-5 text-light">
-      <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/todos" element={<TodosPage isMenuOpen={isMenuOpen}/>} />
-        <Route path="/todos/add" element={<CreateTodoPage/>} />
-        <Route path="/todos/:id/edit" element={<EditTodoPage />} />
-        <Route path="/todos/:id/delete" element={<DeleteTodoPage />} />
-      </Routes>
+      { user ?
+      <>
+        <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/todos" element={<TodosPage isMenuOpen={isMenuOpen}/>} />
+          <Route path="/todos/add" element={<CreateTodoPage/>} />
+          <Route path="/todos/:id/edit" element={<EditTodoPage />} />
+          <Route path="/todos/:id/delete" element={<DeleteTodoPage />} />
+        </Routes>
+      </>
+      : 
+      <AuthPage path="/" setUser={setUser} />
+      }
     </main>
   );
 }
