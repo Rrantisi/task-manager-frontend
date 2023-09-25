@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Todo from '../../components/Todo/Todo';
-// import * as todosAPI from '../../utilities/todos-api';
+import * as todosAPI from '../../utilities/todos-api';
 // import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './TodosPage.css'
 
@@ -9,7 +9,7 @@ export default function TodosPage({isMenuOpen}) {
 
   useEffect(() => {
     async function getTodos() {
-    //   const todos = await todosAPI.getAll();
+      const todos = await todosAPI.getAll();
       setTodos(todos);
     }
     getTodos();
@@ -28,7 +28,7 @@ export default function TodosPage({isMenuOpen}) {
             <div> 
                 <div className="todospage-div"> 
                     <h3 className="heading">Task Dashboard</h3>
-                    <table className="table table-bordered table-striped table-warning text-muted"> 
+                    <table className="table table-striped table-warning text-muted"> 
                         <thead>
                             <tr>
                                 <th>Description</th>
