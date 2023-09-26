@@ -3,13 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css';
 import Footer from '../../components/Footer/Footer';
 
-export default function NavBar({isMenuOpen, setIsMenuOpen}) {
+export default function NavBar({isMenuOpen, setIsMenuOpen, user, setUser}) {
     const location = useLocation();
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const logOut = () => {
+        setUser(null)
+    }
     return (
         <nav className="navbar navbar-dark bg-dark fixed-top border-bottom border-danger border-4">
             <div className="container-fluid">
@@ -25,7 +29,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen}) {
                 </button>
                 <div className={`text-bg-dark offcanvas offcanvas-end ${isMenuOpen ? 'show' : ''}`}>
                     <div className="offcanvas-header text-warning">
-                        <h5 className="offcanvas-title m-2 ps-4">Menu</h5>
+                        <h5 className="offcanvas-title m-2 ps-4">Welcome, {user.name}</h5>
                         <button
                             type="button"
                             className="btn-close btn-close-white"
@@ -51,6 +55,11 @@ export default function NavBar({isMenuOpen, setIsMenuOpen}) {
                             <li className="nav-item p-1">
                                 <Link className={`text-decoration-none nav-link ${location.pathname === '/todos/add' ? 'active' : ''}`} to="/todos/add" onClick={toggleMenu}>
                                     Add a New Task
+                                </Link>
+                            </li>
+                            <li className="nav-item p-1">
+                                <Link className="text-decoration-none nav-link" to="/" onClick={logOut}>
+                                    Log Out
                                 </Link>
                             </li>
                         </ul>
