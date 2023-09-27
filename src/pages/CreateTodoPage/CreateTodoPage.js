@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import * as todoAPI from '../../utilities/todos-api';
+import * as todoAPI from '../../utilities/todos-api';
 import './CreateTodoPage.css';
 
 export default function CreateTodoPage() {
@@ -50,7 +50,7 @@ export default function CreateTodoPage() {
     }
 
     async function handleAddTodo(todoData){
-        // const todo = await todoAPI.addTodo(todoData);
+        const todo = await todoAPI.addTodo(todoData);
         setTodo(todo);
     }
 
@@ -64,7 +64,7 @@ export default function CreateTodoPage() {
                 <div>
                     <input
                         type="text"
-                        className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3"
+                        className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3 text-white"
                         value={todo.todo_description}
                         onChange={onChangeTodoDescription}
                     />
@@ -75,7 +75,7 @@ export default function CreateTodoPage() {
                 <div>
                     <input
                     type="text"
-                    className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3"
+                    className="form-control border-warning-subtle border-1 bg-dark p-4 mt-3 mb-3 text-white"
                     value={todo.todo_responsible}
                     onChange={onChangeTodoResponsible}
                     />
