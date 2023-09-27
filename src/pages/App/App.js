@@ -18,7 +18,7 @@ function App() {
     <main className="App bg-dark p-5 text-light">
       { user ?
       <>
-        <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/todos" element={<TodosPage isMenuOpen={isMenuOpen}/>} />
