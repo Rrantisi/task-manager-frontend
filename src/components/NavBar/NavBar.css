@@ -5,4 +5,8 @@
         inset 6px 0px 0px darkgoldenrod; /* First bottom border (red) */
 }
 
+#welcome-user {
+    text-transform: capitalize;
+}
+
 
