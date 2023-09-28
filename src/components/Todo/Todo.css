@@ -1,0 +1,7 @@
+.custom-border {
+    border-bottom: none;
+}
+
+#custom-task {
+    text-transform: capitalize;
+}
