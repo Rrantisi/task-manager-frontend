@@ -29,7 +29,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen, user, setUser}) {
                 </button>
                 <div className={`text-bg-dark offcanvas offcanvas-end ${isMenuOpen ? 'show' : ''}`}>
                     <div className="offcanvas-header text-warning">
-                        <h5 className="offcanvas-title m-2 ps-4">Welcome, {user.name}</h5>
+                        <h5 id="welcome-user" className="offcanvas-title m-2 ps-4">Welcome, {user.name}!</h5>
                         <button
                             type="button"
                             className="btn-close btn-close-white"
