@@ -28,8 +28,8 @@ export default function TodosPage({isMenuOpen}) {
             <div> 
                 <div className="todospage-div"> 
                     <h3 className="heading">Task Dashboard</h3>
-                    <table className="table table-striped table-warning text-muted"> 
-                        <thead>
+                    <table className="table text-muted"> 
+                        <thead className='table-warning shadow-sm'>
                             <tr>
                                 <th>Description</th>
                                 <th>Responsible</th>
