@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/todos" element={<TodosPage isMenuOpen={isMenuOpen}/>} />
           <Route path="/todos/add" element={<CreateTodoPage/>} />
-          <Route path="/todos/:id/edit" element={<EditTodoPage />} />
+          <Route path="/todos/:id/edit" element={<EditTodoPage user={user}/>} />
           <Route path="/todos/:id/delete" element={<DeleteTodoPage />} />
         </Routes>
       </>
