@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as todoAPI from '../../utilities/todos-api';
 import './CreateTodoPage.css';
 
@@ -10,6 +11,7 @@ export default function CreateTodoPage() {
         todo_priority: '',
         todo_completed: false
     });
+    const navigate = useNavigate();
 
     const onChangeTodoDescription = (e) => {
         setTodo({
@@ -42,7 +44,10 @@ export default function CreateTodoPage() {
                 todo_responsible: '',
                 todo_priority: '',
                 todo_completed: false
-            });  
+            }); 
+            setTimeout(() => {
+                navigate('/todos');
+            }, 1000)   
         } catch (error) {
             setMessage('Failed to add new todo');
             console.error(error);
