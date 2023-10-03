@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import * as todosAPI from '../../utilities/todos-api';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export default function EditTodoPage({ user }) {
     const [message, setMessage] = useState('');
     const { id } = useParams();
-    const { userId } = useParams();
-    // const userId = user._id;
+    const userId = user._id;
+    const navigate = useNavigate();
   
     const [todo, setTodo] = useState({
         todo_description: '',
@@ -19,7 +19,6 @@ export default function EditTodoPage({ user }) {
         async function fetchTodo() {
           try {
             const fetchedTodo = await todosAPI.getTodo(id, userId);
-            console.log('fetched: ' + fetchedTodo)
             setTodo({ 
               ...fetchedTodo, // Spread the fetchedTodo object to update the state
             });
@@ -67,9 +66,11 @@ export default function EditTodoPage({ user }) {
                 todo_priority: todo.todo_priority,
                 todo_completed: todo.todo_completed,
               };
-            console.log(updatedTodo);
             await handleUpdateTodo(id, userId, updatedTodo);
             setMessage('Todo updated successfully');
+            setTimeout(() => {
+              navigate('/todos');
+            }, 1000)
         } catch (error) {
             setMessage('Failed to update todo');
             console.error(error);
@@ -77,14 +78,13 @@ export default function EditTodoPage({ user }) {
     }
 
     async function handleUpdateTodo(todoId, userId, todoData ) {
-        // console.log('todo is' + todo)
         setTodo({
             todo_description: todoData.todo_description,
             todo_responsible: todoData.todo_responsible,
             todo_priority: todoData.todo_priority,
             todo_completed: todoData.todo_completed
         });
-        // await todosAPI.updateTodo(todoId, userId, todoData)
+        await todosAPI.updateTodo(todoId, userId, todoData)
       }
     
       return (
