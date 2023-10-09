@@ -7,9 +7,6 @@ export default function Todo({ todo }){
             <td id='custom-task' className= {`bg-transparent shadow text-white custom-border ${todo.todo_completed ? 'completed' : ''}`}>{todo.todo_description}</td>
             <td id='custom-task' className= {`bg-transparent shadow text-white custom-border ${todo.todo_completed ? 'completed' : ''}`}>{todo.todo_responsible}</td>
             <td id='custom-task' className= {`bg-transparent shadow text-white custom-border ${todo.todo_completed ? 'completed' : ''}`}>{todo.todo_priority}</td>
-            <td id='custom-task' className='bg-transparent shadow text-white custom-border'>
-                {/* <Link to={todo._id + "/edit/"} state={{todo}}>Edit</Link> */}
-            </td>
             <td className='bg-transparent shadow text-white custom-border'>
                 <Link to={todo._id + "/edit/"} state={{todo}} className='text-warning text-decoration-none'>Edit</Link>
                 &nbsp; | &nbsp;
