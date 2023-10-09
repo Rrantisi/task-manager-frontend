@@ -88,7 +88,7 @@ export default function EditTodoPage({ user }) {
       }
     
       return (
-        <div>
+        <div style={{ marginTop: 80 }}>
           <h3 align="center">Update Todo</h3>
           {message && <p>{message}</p>}
           <form onSubmit={onSubmit}>
