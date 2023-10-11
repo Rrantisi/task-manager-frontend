@@ -1,24 +1,10 @@
 import React from 'react';
+import './HomePage.css'
 
 export default function HomePage() {
     return (
-        <>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        <h2>This is the homepage</h2>
-        </>
+        <div className='text-animation' style={{ marginTop: 100 }}> 
+            <h2>Welcome to Task Manager</h2>
+        </div>
     )
 }
