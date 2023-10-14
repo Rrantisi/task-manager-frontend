@@ -34,7 +34,6 @@ export default function TodosPage({isMenuOpen}) {
                                 <th>Description</th>
                                 <th>Responsible</th>
                                 <th>Priority</th>
-                                <th>Category</th>
                             </tr>
                         </thead>
                         <tbody>{todoList}</tbody>
