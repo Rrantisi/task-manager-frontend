@@ -27,14 +27,14 @@ export default function LoginForm({ setUser }) {
         <div>
             <div className="form-container">
                 <form autoComplete="off" onSubmit={handleSubmit}>
-                    <label>Email</label>
-                    <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-                    <label>Password</label>
-                    <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-                    <button type="submit">LOG IN</button>
+                    <label className="form-label">Email</label>
+                    <input type="text" name="email" value={credentials.email} onChange={handleChange} className="form-control" required />
+                    <label className="form-label">Password</label>
+                    <input type="password" name="password" value={credentials.password} onChange={handleChange} className="form-control" required />
+                    <button type="submit" className="btn btn-outline-warning">Log In</button>
                 </form>
             </div>
-            <p className="error-message">&nbsp;{error}</p>
+            <p className="text-danger">&nbsp;{error}</p>
         </div>
     )
 }
