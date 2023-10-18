@@ -1,0 +1,7 @@
+#custom-task {
+    text-transform: capitalize;
+}
+
+h3 > #custom-task {
+    font-style: italic;
+}
