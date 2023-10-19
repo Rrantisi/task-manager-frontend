@@ -18,7 +18,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen, user, setUser}) {
         <nav className="navbar navbar-dark bg-dark fixed-top border-bottom border-danger border-4">
             <div className="container-fluid">
                 <Link className="navbar-brand text-decoration-none text-light" to="#">
-                    Task Manager
+                track<span className='text-success'>.</span><span className='text-warning'>.</span><span className='text-danger'>.</span>it
                 </Link>
                 <button
                     className="navbar-toggler"
