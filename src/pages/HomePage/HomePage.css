@@ -6,7 +6,6 @@
 
 .text-animation h2{
     text-align: center;
-    text-transform: uppercase;
     font-size: 5vmin;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
@@ -20,7 +19,7 @@
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 50% }
+    to { width: 52vmin }
   }
 
 @keyframes blink-caret {
