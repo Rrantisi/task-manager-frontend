@@ -18,7 +18,7 @@ export default function NavBar({isMenuOpen, setIsMenuOpen, user, setUser}) {
         <nav className="navbar navbar-dark bg-dark fixed-top border-bottom border-danger border-4">
             <div className="container-fluid">
                 <Link className="navbar-brand text-decoration-none text-light" to="#">
-                <span className='logoFont logoBigger'>track<span className='text-success'>.</span><span className='text-warning'>.</span><span className='text-danger'>.</span>it</span>
+                <span className='logoFont logoBigger'><span className='text-success'>.</span><span className='text-warning'>.</span><span className='text-danger'>.</span>tracked</span>
                 </Link>
                 <button
                     className="navbar-toggler"
