@@ -38,7 +38,7 @@ export default function CreateTodoPage() {
         e.preventDefault();
         try {
             await handleAddTodo(todo);
-            setMessage('Todo added successfully');
+            setMessage('Task added successfully');
             setTodo({
                 todo_description: '',
                 todo_responsible: '',
@@ -49,7 +49,7 @@ export default function CreateTodoPage() {
                 navigate('/todos');
             }, 1000)   
         } catch (error) {
-            setMessage('Failed to add new todo');
+            setMessage('Failed to add new task');
             console.error(error);
         }
     }
