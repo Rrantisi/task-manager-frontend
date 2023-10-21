@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Todo from '../../components/Todo/Todo';
 import * as todosAPI from '../../utilities/todos-api';
-// import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './TodosPage.css'
 
 export default function TodosPage({isMenuOpen}) {
@@ -18,9 +17,6 @@ export default function TodosPage({isMenuOpen}) {
   const todoList = todos.map((todo) => (
     <Todo todo={todo} key={todo._id} />
   ));
-
-//   const columnWidthClass = isMenuOpen ? 'col-lg-9 col-md-8' : 'col-lg-12 col-md-12';
-//   console.log('isMenuOpen prop in TodosPage:', isMenuOpen);
 
   return (
     <div className="col-md-12 col-lg-12 col-sm-12" style={{ marginTop: 80 }}> 
