@@ -39,43 +39,46 @@ export default class SignUp extends Component {
             <div>
                 <div className="form-container">
                     <form autoComplete="off" onSubmit={this.handleSubmit}>
-                        <label>Name</label>
+                        <label className="form-label">Name</label>
                         <input
                             type="text"
                             name="name"
                             value={this.state.name}
                             onChange={this.handleChange}
+                            className="form-control"
                             required 
                         />
-                        <label>Email</label>
+                        <label className="form-label">Email</label>
                         <input
                             type="email"
                             name="email"
                             value={this.state.email}
                             onChange={this.handleChange}
+                            className="form-control"
                             required 
                         />
-                        <label>Password</label>
+                        <label className="form-label">Password</label>
                         <input 
                             type="password"
                             name="password"
                             value={this.state.password}
                             onChange={this.handleChange}
+                            className="form-control"
                             required
                         />
-                        <label>Confirm</label>
+                        <label className="form-label">Confirm</label>
                         <input 
                             type="password"
                             name="confirm"
                             value={this.state.confirm}
                             onChange={this.handleChange}
+                            className="form-control"
                             required
-
                         />
-                        <button type="submit" disabled={disabled}>Sign Up</button>
+                        <button type="submit" disabled={disabled} className="btn btn-outline-warning mt-2">Sign Up</button>
                     </form> 
                 </div>
-                <p className="error-message">&nbsp;{this.state.error}</p>
+                <p className="text-danger">&nbsp;{this.state.error}</p>
             </div>
         )
     }
