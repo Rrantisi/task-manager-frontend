@@ -5,3 +5,8 @@
 #custom-task {
     text-transform: capitalize;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: black;
+}
