@@ -9,7 +9,16 @@ export default function TodosPage({isMenuOpen}) {
   useEffect(() => {
     async function getTodos() {
       const todos = await todosAPI.getAll();
-      setTodos(todos);
+
+      // Sort the todos based on priority
+      const sortedTodos = todos.sort((a, b) => {
+        const priorityValues = { High: 1, Medium: 2, Low: 3 };
+        const priorityA = priorityValues[a.todo_priority];
+        const priorityB = priorityValues[b.todo_priority];
+        return priorityA - priorityB;
+      });
+
+      setTodos(sortedTodos);    
     }
     getTodos();
   }, []);
