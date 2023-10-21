@@ -13,7 +13,15 @@ export default function AuthPage({ setUser }) {
     <main className="container mt-5">
       <div className="row">
         <div className="col-md-6 p-3">
-          <h1 className="text-center mb-4">Welcome to <span className='logoFont'><span className='text-success'>.</span><span className='text-warning'>.</span><span className='text-danger'>.</span>tracked</span></h1>
+            <h1 className="text-center mb-4">
+                Welcome to 
+                <span className='logoFont'>
+                    <span className='text-success'>.</span>
+                    <span className='text-warning'>.</span>
+                    <span className='text-danger'>.</span>
+                    tracked
+                </span>
+            </h1>
         </div>
         <div className="col-md-6 p-3">
             <div className="row justify-content-center">
