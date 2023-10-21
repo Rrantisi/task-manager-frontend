@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as todosAPI from '../../utilities/todos-api';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 export default function EditTodoPage({ user }) {
     const [message, setMessage] = useState('');
@@ -67,12 +67,12 @@ export default function EditTodoPage({ user }) {
                 todo_completed: todo.todo_completed,
               };
             await handleUpdateTodo(id, userId, updatedTodo);
-            setMessage('Todo updated successfully');
+            setMessage('Task updated successfully');
             setTimeout(() => {
               navigate('/todos');
             }, 1000)
         } catch (error) {
-            setMessage('Failed to update todo');
+            setMessage('Failed to update task');
             console.error(error);
         }
     }
@@ -89,7 +89,6 @@ export default function EditTodoPage({ user }) {
     
       return (
         <div style={{ marginTop: 80 }}>
-          <h3 align="center">Update Todo</h3>
           {message && <p>{message}</p>}
           <form onSubmit={onSubmit}>
             <div className="form-group"> 
@@ -166,7 +165,8 @@ export default function EditTodoPage({ user }) {
             <br />
     
             <div className="form-group">
-              <input type="submit" value="Update Todo" className="btn btn-warning" />
+              <input type="submit" value="Update Task" className="btn btn-outline-warning me-3"/>
+              <Link to={"/todos"} className="btn btn-outline-danger">Cancel</Link>
             </div>
           </form>
         </div>
