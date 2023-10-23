@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="/src/images/logo.png" alt="ReadMe" width="80" height="80">
+    <img src="/frontend/src/images/logo.png" alt="ReadMe" width="80" height="80">
 </div>
 
 <!-- TABLE OF CONTENTS -->
