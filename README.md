@@ -34,7 +34,7 @@ Introducing "...tracked" a Task Management App that caters to your organization 
 
 ![...tracked-App](/frontend/src/images/11.png)
 
-![...tracked-App](./src/images/22.png)
+![...tracked-App](../frontend/src/images/22.png)
 
 ![...tracked-App](/src/images/33.png)
 
