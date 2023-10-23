@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="/frontend/src/images/logo.png" alt="ReadMe" width="80" height="80">
+    <img src="src/images/logo.png" alt="ReadMe" width="80" height="80">
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -32,7 +32,7 @@ Introducing "...tracked" a Task Management App that caters to your organization 
 - To modify a task or mark it as completed, simply click the 'Edit' button located alongside the task you wish to adjust.
 - To remove a task, simply click the 'Delete' button located beside the task you wish to eliminate.
 
-![...tracked-App](/src/images/11.png)
+![...tracked-App](src/images/11.png)
 
 ![...tracked-App](/src/images/22.png)
 
