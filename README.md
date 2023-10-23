@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="/src/images/logo.png" alt="ReadMe" width="80" height="80">
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+<details>
+  <summary>Table of Contents</summary>
 
-In the project directory, you can run:
+  <ol>
+    <li><a href="#about-the-project">About The Project</a>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#icebox">Ice Box</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+<!-- CONTENT -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About the Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Introducing "...tracked" a Task Management App that caters to your organization and productivity needs. "...tracked" offers a user-friendly and intuitive interface for effortless task creation, management, and tracking. Whether you're a solo entrepreneur, a project manager, or part of a team, our app is designed to streamline your task management process.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- After successfully setting up an account, you'll gain access to your personalized task management tools.
+- Create a fresh task by selecting 'Add a New Task' from the dropdown menu and completing the required details.
+- To view your current tasks, simply choose "My Current Tasks" from the dropdown menu.
+- To modify a task or mark it as completed, simply click the 'Edit' button located alongside the task you wish to adjust.
+- To remove a task, simply click the 'Delete' button located beside the task you wish to eliminate.
 
-### `npm run build`
+![...tracked-App](/src/images/11.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![...tracked-App](/src/images/22.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![...tracked-App](/src/images/33.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![...tracked-App](/src/images/44.png)
 
-### `npm run eject`
+![...tracked-App](/src/images/55.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![...tracked-App](/src/images/66.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![...tracked-App](/src/images/77.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Built With
 
-## Learn More
+- [MongoDB](https://www.mongodb.com/) 
+- [Express.js](https://expressjs.com/)
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [Mongoose](https://mongoosejs.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Icebox Items
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Share tasks with other users
+2. Categorize tasks
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rehamrantisi/)](https://www.linkedin.com/in/rehamrantisi/) Reham Rantisi - rantisireham19@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br><hr>
+[:arrow_up: Back to top](#ReadMe)
