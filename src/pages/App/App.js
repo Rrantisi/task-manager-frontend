@@ -21,7 +21,7 @@ function App() {
         <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/todos" element={<TodosPage isMenuOpen={isMenuOpen}/>} />
+          <Route path="/todos" element={<TodosPage />} />
           <Route path="/todos/add" element={<CreateTodoPage/>} />
           <Route path="/todos/:id/edit" element={<EditTodoPage user={user}/>} />
           <Route path="/todos/:id/delete" element={<DeleteTodoPage user={user} />} />
