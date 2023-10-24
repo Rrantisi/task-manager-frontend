@@ -41,7 +41,6 @@ export default function DeleteTodoPage({ user }) {
     async function handleDeleteTodo(todoId) {
         try {
           await todosAPI.deleteTodo(todoId);
-          // Redirect to the home page or a different route after successful deletion
           navigate('/todos');
         } catch (error) {
           console.log(error);
