@@ -2,8 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="text-secondary pt-5 text-center">
-      {/* Footer content */}
+      <footer className="text-secondary pt-5 text-center">
       &copy; 2023 
       <span className='logoFont logoBigger'>
         <span className='text-success'>.</span>
