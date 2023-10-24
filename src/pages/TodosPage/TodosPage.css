@@ -1,15 +1,15 @@
 .table {
-    border-collapse: separate;
-    border-spacing: 20px;
-    table-layout: fixed;
-    width: 100%; /* Set the table width to 100% */
-    text-align: center;
+  border-collapse: separate;
+  border-spacing: 20px;
+  table-layout: fixed;
+  width: 100%; /* Set the table width to 100% */
+  text-align: center;
 }
 
 .heading {
-    text-align: center;
+  text-align: center;
 }
 
 .custom-table {
-    background-color: transparent;
+  background-color: transparent;
 }
