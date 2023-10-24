@@ -3,7 +3,7 @@ import Todo from '../../components/Todo/Todo';
 import * as todosAPI from '../../utilities/todos-api';
 import './TodosPage.css'
 
-export default function TodosPage({isMenuOpen}) {
+export default function TodosPage() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
