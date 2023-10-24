@@ -1,13 +1,9 @@
-/* App.css */
-
-/* Style the main container */
 .App {
   font-family: Arial, sans-serif;
   padding: 20px;
   height: 100vh;
 }
 
-/* Style the navigation bar */
 nav {
   text-align: center;
 }
