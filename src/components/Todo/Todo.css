@@ -1,12 +1,12 @@
 .custom-border {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 #custom-task {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .completed {
-    text-decoration: line-through;
-    color: black;
+  text-decoration: line-through;
+  color: black;
 }
